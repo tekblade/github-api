@@ -1,0 +1,17 @@
+<div *ngIf="helpFlagCheckIfAvailable1" class="setWidth">
+<div  *ngIf="helpFlagCheckIfAvailable2">
+<fieldset>
+    <legend>{{user}}'s {{repository}} repository</legend>
+    List of branches:
+    <ul>
+        <li *ngFor="let branch of branches">{{branch.name}}</li> 
+    </ul>
+    Last Commit:
+    <ul>
+        <li>{{commits[0].commit.author.date}}</li> 
+    </ul>
+</fieldset>
+</div>
+</div>
+<br>
+<a [routerLink]="['/main']">Back to main page</a>

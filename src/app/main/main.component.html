@@ -1,0 +1,13 @@
+
+<div class="center">
+<h3>Check repository of the specified user</h3>
+<form [formGroup]="profileForm" (ngSubmit)="submitUser()">
+<div>
+    <label>User</label>
+    <input type="text" formControlName="user" >
+    <p *ngIf="profileForm.invalid">user field cannot be empty</p>
+    <button class="button">Submit</button>
+</div>
+</form>
+</div>
+

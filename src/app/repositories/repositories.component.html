@@ -1,0 +1,12 @@
+
+<div *ngIf="flagThatPreventChangingDataInRuntime" class="setWidth">
+  <div *ngIf="!flagThatChecksIfUserExists">
+    <fieldset *ngFor="let rep of repositories">
+      <legend>{{rep.owner.login}}'s repository</legend>
+        repository name: {{rep.name}} &nbsp;&nbsp;  <a [routerLink]="['/user', rep.owner.login, rep.name]">more</a>
+    </fieldset>
+  </div>
+  <p *ngIf="flagThatChecksIfUserExists">Error: This user doesn't exist</p>
+</div>
+<br>
+<a [routerLink]="['/main']">Back to main page</a>
