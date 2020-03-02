@@ -24,10 +24,10 @@ export class RepositoriesComponent implements OnInit {
     let helpArrayForCuttingFirstIndex=[];
     this.getRepo.getUserRepositories(this.param).subscribe(
       value=>{
-        helpArrayForCuttingFirstIndex.push(value);
+        helpArrayForCuttingFirstIndex.push(value);        //instead of push could be used '=' sign
         for(let val of helpArrayForCuttingFirstIndex)   //a little bit confusing 
           for(let help of val)                          //got an array of one element with subarray of array desired 
-            this.repositories.push(help);               //instead of push could be used '=' sign
+            this.repositories.push(help);               
         this.flagThatChecksIfUserExists=false; 
         this.flagThatPreventChangingDataInRuntime=true;
       },
