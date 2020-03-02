@@ -27,7 +27,7 @@ export class RepositoriesComponent implements OnInit {
         helpArrayForCuttingFirstIndex.push(value);
         for(let val of helpArrayForCuttingFirstIndex)   //a little bit confusing 
           for(let help of val)                          //got an array of one element with subarray of array desired 
-            this.repositories.push(help);      
+            this.repositories.push(help);               //instead of push could be used '=' sign
         this.flagThatChecksIfUserExists=false; 
         this.flagThatPreventChangingDataInRuntime=true;
       },
